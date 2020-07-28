@@ -15,7 +15,6 @@ import margherita from './images/margherita.jpg';
 import meat from './images/meat.jpg';
 import veggie from './images/veggie.jpg';
 import two from './images/two_pizzas.jpg';
-import './App.css';
 
 const stripePromise = loadStripe('pk_test_51H9eyuKgRUl0zJ2kaMIzFP4QHZTNp1Dd2xmka8zZwJduMDcGAZnNMVpQDDiowaGg545Np9TiyJWuzy2hzgPVp8Rl00Ec5SG3SI');
 
@@ -65,7 +64,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="main">
       <Navbar sticky="top" bg="light" expand="lg">
         <Navbar.Brand href="#">🍕Allora🍕</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -75,10 +74,10 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Container>
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-left title">
             Pizza Kits
         </Row>
-        <Row className="justify-content-md-center">
+        <Row className="space">
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" height="200em" src={margherita} />
             <Card.Body>
@@ -122,7 +121,7 @@ function App() {
       </Container>
       <br /><br />
       <Container>
-        <Row className="justify-content-md-center">Pizza Subscriptions</Row>
+        <Row className="space">Pizza Subscriptions</Row>
         <Row className="justify-content-md-center">
           <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" height="200em" src={two} />
