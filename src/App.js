@@ -121,8 +121,8 @@ function App() {
       </Container>
       <br /><br />
       <Container>
-        <Row className="space">Pizza Subscriptions</Row>
-        <Row className="justify-content-md-center">
+        <Row className="title">Pizza Subscriptions</Row>
+        <Row className="justify-content-md-left">
           <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" height="200em" src={two} />
               <Card.Body>
