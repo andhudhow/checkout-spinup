@@ -18,7 +18,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar sticky="top" bg="light" expand="lg">
         <Navbar.Brand href="#home">Allora</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -27,7 +27,10 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Container>
-        <Row>
+        <Row className="justify-content-md-center">
+            Pizza Kits
+        </Row>
+        <Row className="justify-content-md-center">
           <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" height="200em" src={margherita} />
             <Card.Body>
@@ -71,19 +74,21 @@ function App() {
       </Container>
       <br /><br />
       <Container>
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" height="200em" src={two} />
-            <Card.Body>
-              <Card.Title>2 Pizza Kits per Month</Card.Title>
-              <Card.Text>
-                Become a master dough slinger!
-                <br/>
-                <br/>
-                2 Pizza Kits delivered to your door monthly.
-              </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
+        <Row className="justify-content-md-center">
+          <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" height="200em" src={two} />
+              <Card.Body>
+                <Card.Title>2 Pizza Kits per Month</Card.Title>
+                <Card.Text>
+                  Become a master dough slinger!
+                  <br/>
+                  <br/>
+                  2 Pizza Kits delivered to your door monthly.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
           </Card>
+        </Row>
       </Container>
     </div>
   );
