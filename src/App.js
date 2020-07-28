@@ -7,6 +7,7 @@ import {
   Card,
   Button 
 } from 'react-bootstrap';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { loadStripe } from '@stripe/stripe-js';
@@ -66,7 +67,7 @@ function App() {
   return (
     <div className="main">
       <Navbar sticky="top" bg="light" expand="lg">
-        <Navbar.Brand href="#">🍕Allora🍕</Navbar.Brand>
+        <Navbar.Brand href="#">🇮🇹 Allora 🇮🇹</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -74,7 +75,7 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Container>
-        <Row className="justify-content-md-left title">
+        <Row className="justify-content-md-center">
             Pizza Kits
         </Row>
         <Row className="space">
@@ -121,8 +122,8 @@ function App() {
       </Container>
       <br /><br />
       <Container>
-        <Row className="title">Pizza Subscriptions</Row>
-        <Row className="justify-content-md-left">
+        <Row className="justify-content-md-center">Pizza Subscriptions</Row>
+        <Row className="justify-content-md-center">
           <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" height="200em" src={two} />
               <Card.Body>
