@@ -9,13 +9,54 @@ import {
 } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { loadStripe } from '@stripe/stripe-js';
+
 import margherita from './images/margherita.jpg';
 import meat from './images/meat.jpg';
 import veggie from './images/veggie.jpg';
 import two from './images/two_pizzas.jpg';
 import './App.css';
 
+const stripePromise = loadStripe('pk_test_51H9eyuKgRUl0zJ2kaMIzFP4QHZTNp1Dd2xmka8zZwJduMDcGAZnNMVpQDDiowaGg545Np9TiyJWuzy2hzgPVp8Rl00Ec5SG3SI');
+
 function App() {
+
+  const handleOneTimeClick = async e => {
+    // When the customer clicks on the button, redirect them to Checkout.
+    const price = e.target.value;
+    const stripe = await stripePromise;
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [{
+        price, // Replace with the ID of your price
+        quantity: 1,
+      }],
+      mode: 'payment',
+      successUrl: 'http://localhost:3000/success',
+      cancelUrl: 'http://localhost:3000',
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+  };
+
+  const handleSubClick = async e => {
+    // When the customer clicks on the button, redirect them to Checkout.
+    const price = e.target.value;
+    const stripe = await stripePromise;
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [{
+        price, // Replace with the ID of your price
+        quantity: 1,
+      }],
+      mode: 'subscription',
+      successUrl: 'http://localhost:3000/success',
+      cancelUrl: 'http://localhost:3000',
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+  };
+
   return (
     <div>
       <Navbar sticky="top" bg="light" expand="lg">
@@ -41,7 +82,7 @@ function App() {
                 <br/>
                 Includes 1 dough ball, 2 oz sauce, 4 oz DOP buffalo mozzarella, and fresh basil sprigs.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary" value="price_1H9fRtKgRUl0zJ2kjcrY493m" onClick={handleOneTimeClick}>Buy now</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '18rem' }}>
@@ -54,7 +95,7 @@ function App() {
                 <br/>
                 Includes 1 dough ball, 2 oz sauce, 4 oz DOP buffalo mozzarella, 1 meat and 1 veggie topping.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary" value="price_1H9fVnKgRUl0zJ2kBmX9w5GJ" onClick={handleOneTimeClick}>Buy now</Button>
             </Card.Body>
           </Card>
           <Card style={{ width: '18rem' }}>
@@ -67,7 +108,7 @@ function App() {
                 <br/>
                 Includes 1 dough ball, 2 oz sauce, 4 oz DOP buffalo mozzarella, 2 veggie toppings.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary" value="price_1H9fYJKgRUl0zJ2kfpLCPv8c" onClick={handleOneTimeClick}>Buy now</Button>
             </Card.Body>
           </Card>
         </Row>
@@ -86,7 +127,7 @@ function App() {
                   <br/>
                   2 Pizza Kits delivered to your door monthly.
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary" value="price_1H9fiHKgRUl0zJ2kTi9PwwLN" onClick={handleSubClick}>Buy now</Button>
               </Card.Body>
           </Card>
         </Row>
