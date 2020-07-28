@@ -35,7 +35,8 @@ function App() {
       cancelUrl: 'http://localhost:3000',
       shippingAddressCollection: {
         allowedCountries: ['US'],
-      }
+      },
+      billingAddressCollection: "auto"
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
@@ -66,7 +67,7 @@ function App() {
   return (
     <div>
       <Navbar sticky="top" bg="light" expand="lg">
-        <Navbar.Brand href="#">Allora</Navbar.Brand>
+        <Navbar.Brand href="#">🍕Allora🍕</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
