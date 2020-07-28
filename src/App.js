@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <Navbar sticky="top" bg="light" expand="lg">
-        <Navbar.Brand href="#home">Allora</Navbar.Brand>
+        <Navbar.Brand href="#">Allora</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -74,6 +74,7 @@ function App() {
       </Container>
       <br /><br />
       <Container>
+        <Row className="justify-content-md-center">Pizza Subscriptions</Row>
         <Row className="justify-content-md-center">
           <Card style={{ width: '18rem' }}>
               <Card.Img variant="top" height="200em" src={two} />
