@@ -1,4 +1,6 @@
-## The purpose of this app is to spinup on Checkout, starting with the client-only experience.
+## The purpose of this app is to spinup on Checkout with the client-only experience through the experience of a fictional pizza kit delivery / subscription service, Allora.
+
+![App Preview](/public/preview.png)
 
 ## Friction log can be found at [go/client-only-friction](https://go/client-only-friction).
 
