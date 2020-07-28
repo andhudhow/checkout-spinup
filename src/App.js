@@ -33,6 +33,9 @@ function App() {
       mode: 'payment',
       successUrl: 'http://localhost:3000/success',
       cancelUrl: 'http://localhost:3000',
+      shippingAddressCollection: {
+        allowedCountries: ['US'],
+      }
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
@@ -51,6 +54,9 @@ function App() {
       mode: 'subscription',
       successUrl: 'http://localhost:3000/success',
       cancelUrl: 'http://localhost:3000',
+      shippingAddressCollection: {
+        allowedCountries: ['US'],
+      }
     });
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
