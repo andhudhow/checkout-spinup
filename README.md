@@ -1,6 +1,6 @@
 ## The purpose of this app is to spinup on Checkout, starting with the client-only experience.
 
-## Friction log can be found at [go/friction](https://go/client-only-friction).
+## Friction log can be found at [go/client-only-friction](https://go/client-only-friction).
 
 In the project directory, you can run:
 
