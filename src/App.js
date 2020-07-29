@@ -31,7 +31,7 @@ function App() {
         quantity: 1,
       }],
       mode: 'payment',
-      successUrl: 'http://localhost:3000',
+      successUrl: 'http://localhost:3000/success',
       cancelUrl: 'http://localhost:3000',
       shippingAddressCollection: {
         allowedCountries: ['US'],
